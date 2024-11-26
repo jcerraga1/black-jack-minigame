@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/blackjack.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>BlackJack.inc</header>
+        <div id="first-page" style="display: block;">
+            <p style="font-size: 1.6em;">LOG-IN</p>
+            <label for="username">Username <i class="fa fa-user icon"></i></label>
+            <input type="text" id="username" required>
+            <br><br>
+            <label for="password">Password <i class="fa fa-key icon"></i> </label>
+            <input type="password" id="password" required>
+            <br><br>
+            <label for="charge">Charge your account <i class="fa fa-dollar"></i></label>
+            <br>
+            <input style="margin-top: 10px; width: 120px;" type="number" id="charge" min="20" placeholder="$" required>
+            <br><br> 
+            <button onclick="getInput()">Continue</button>
+        </div>
+        <div id="game" style="display: none;">
+            <fieldset id="info">
+                <legend style="font-size: 18px;">Game-Information</legend>
+                <p>Start Game, -$20</p>
+                <p>BlackJack (21), +$60</p>
+            </fieldset>
+            <p id="player-el"></p>
+            <p id="message-el">Want to play a round?</p>
+            <p id="cards-el">Cards:</p>
+            <p id="sum-el">Sum:</p>
+            <div id="buttons">
+                <button onclick="startGame()">START GAME</button>
+                <button onclick="newCard()">NEW CARD</button>
+            </div>
+        </div>
+        
+        <script src="/blackjack.js"></script>
+    </body>
+</html>
+
